@@ -6,7 +6,7 @@ except ImportError:
  import xml.etree.ElementTree as ET 
  import sys 
 try: 
- tree = ET.parse("test.xml")     #打开xml文档 
+ tree = ET.parse("linux.xml")     #打开xml文档 
 #root = ET.fromstring(country_string) #从字符串传递xml 
  root = tree.getroot()         #获得root节点  
 except Exception, e: 
@@ -117,4 +117,4 @@ for country in root.findall('dict'): #找到root节点下的所有country节点
 #  if rank > 50: 
 #   root.remove(country) 
  
-tree.write('output.xml') 
+#tree.write('output.xml') 
