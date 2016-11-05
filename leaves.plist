@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+        <key>Algorithm</key>
+        <dict>
+                <key>detail</key>
+                <string>Algorithm detail missing</string>
+                <key>URL</key>
+                <string>https://en.wikipedia.org/wiki/Algorithm</string>
+        </dict>
+        <key>DSAAC2eCode</key>
+        <dict>
+                <key>detail</key>
+                <string>Data Structures and Algorithm Analysis in C (Second Edition)</string>
+                <key>URL</key>
+                <string>http://users.cis.fiu.edu/~weiss/dsaa_c2e/DSAAC2eCode.tar.Z</string>
+        </dict>
+	<key>Linux</key>
+	<dict>
+		<key>detail</key>
+		<string>Linux is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. </string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Linux</string>
+	</dict>
+	<key>kernel</key>
+	<dict>
+		<key>detail</key>
+		<string>The Linux kernel is a Unix-like computer operating system kernel.</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Linux_kernel</string>
+	</dict>
+	<key>grub</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU GRUB (short for GNU GRand Unified Bootloader) is a boot loader package from the GNU Project.</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/GNU_GRUB</string>
+	</dict>
+	<key>ethtool</key>
+	<dict>
+		<key>detail</key>
+		<string>ethtool is a utility for Linux kernel-based operating system for displaying and modifying some parameters of network interface controllers (NICs) and their device drivers. </string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Ethtool</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/software/network/ethtool/ethtool-4.2.tar.gz</string>
+			<key>detail</key>
+			<string>ethtool 4.2, 2015-10-09</string>
+			<key>file_name</key>
+			<string>ethtool-4.2</string>
+			<key>name</key>
+			<string>ethtool 4.2</string>
+		</dict>
+	</dict>
+	<key>APUE</key>
+	<dict>
+		<key>detail</key>
+		<string>Advanced Programming in the UNIX® Environment</string>
+		<key>URL</key>
+		<string>http://www.apuebook.com</string>
+	</dict>
+	<key>LKML</key>
+	<dict>
+		<key>detail</key>
+		<string>Linux Kernel Mailing List</string>
+		<key>URL</key>
+		<string>https://lkml.org</string>
+	</dict>
+	<key>Basic</key>
+	<dict>
+		<key>detail</key>
+		<string>How to connetct User tools and Kernel.  Have a free comments package for downloading.</string>
+		<key>URL</key>
+		<string>https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=a17236fd-e883-409b-9037-9b81704cc3a7</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/gzg1984/APUE/archive/master.zip</string>
+			<key>detail</key>
+			<string>Basic System Call Example</string>
+			<key>file_name</key>
+			<string>APUE-master</string>
+			<key>name</key>
+			<string>Basic Example</string>
+			<key>OwnerUUID</key>
+			<string>TheOnly</string>
+			<key>color</key>
+			<string>Orange</string>
+			<key>static</key>
+			<string>No</string>
+		</dict>
+	</dict>
+	<key>pthreads-sample</key>
+	<dict>
+		<key>detail</key>
+		<string>This is pthread sample for pthread functions</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/gzg1984/pthreads/archive/master.zip</string>
+			<key>detail</key>
+			<string>pthread example from Linux Source Project</string>
+			<key>file_name</key>
+			<string>pthread-master</string>
+			<key>name</key>
+			<string>pthread Example</string>
+			<key>OwnerUUID</key>
+			<string>TheOnly</string>
+			<key>color</key>
+			<string>pink</string>
+			<key>static</key>
+			<string>No</string>
+		</dict>
+	</dict>
+	<key>LSB</key>
+	<dict>
+		<key>detail</key>
+		<string>Linux Standard Base</string>
+		<key>URL</key>
+		<string>http://www.linuxfoundation.org/collaborate/workgroups/lsb</string>
+		<!--common text url http://refspecs.linuxfoundation.org/LSB_5.0.0/LSB-Common/LSB-Common.txt -->
+		<!--core generic http://refspecs.linuxfoundation.org/LSB_5.0.0/LSB-Core-generic/LSB-Core-generic.txt link to ifconfig -->
+		<!--AMD64  http://refspecs.linuxfoundation.org/LSB_5.0.0/LSB-Core-AMD64/LSB-Core-AMD64.txt -->
+	</dict>
+	<key>POSIX</key>
+	<dict>
+		<key>detail</key>
+		<string>Portable Operating System Interface for UNIX</string>
+		<key>URL</key>
+		<string>http://www.opengroup.org/search/node/posix</string>
+	</dict>
+	<key>GLIBC</key>
+	<dict>
+		<key>detail</key>
+		<string>The GNU C Library (glibc)</string>
+		<key>URL</key>
+		<string>https://www.gnu.org/software/libc/index.html</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>http://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz</string>
+			<key>detail</key>
+			<string>2016-02-19: glibc 2.23 released.</string>
+			<key>file_name</key>
+			<string>glibc-2.23</string>
+			<key>name</key>
+			<string>glibc</string>
+			<key>OwnerUUID</key>
+			<string>TheOnly</string>
+			<key>color</key>
+			<string>orange</string>
+			<key>static</key>
+			<string>Yes</string>
+		</dict>
+	</dict>
+	<key>UNIX</key>
+	<dict>
+		<key>detail</key>
+		<string>UNIX®</string>
+		<key>URL</key>
+		<string>http://www.opengroup.org/standards/unix</string>
+	</dict>
+	<key>LSB SDK</key>
+	<dict>
+		<key>detail</key>
+		<string>LSB Software Development Kit (SDK)</string>
+		<key>URL</key>
+		<string>http://www.linuxfoundation.org/collaborate/workgroups/lsb/download</string>
+	</dict>
+	<key>GNU/Linux</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU/Linux operating system</string>
+		<key>URL</key>
+		<string>http://www.gnu.org/gnu/linux-and-gnu.html</string>
+	</dict>
+	<key>GNU Software</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU is an operation system which is 100% free software.</string>
+		<key>URL</key>
+		<string>http://www.gnu.org/software/software.html</string>
+	</dict>
+	<key>GNU</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU is Not Unix</string>
+		<key>URL</key>
+		<string>http://www.gnu.org</string>
+	</dict>
+	<key>GPL</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU General Public License</string>
+	</dict>
+	<key>LGPL</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU Library General Public License </string>
+	</dict>
+	<key>GFDL</key>
+	<dict>
+		<key>detail</key>
+		<string>GNU Free Documentation License</string>
+	</dict>
+	<key>FHS</key>
+	<dict>
+		<key>detail</key>
+		<string>Filesystem Hierarchy Standard</string>
+		<key>URL</key>
+		<string>http://refspecs.linuxfoundation.org/fhs.shtml</string>
+		<!--text url http://refspecs.linuxfoundation.org/FHS_3.0/fhs-3.0.txt -->
+	</dict>
+	<key>DPDK 2.2</key>
+	<dict>
+		<key>detail</key>
+		<string>DPDK(Data Plane Development Kit) is a set of libraries and drivers for fast packet processing.</string>
+		<key>ImageURL</key>
+		<string>http://www.dpdk.eu/dpdk.png</string>
+		<key>URL</key>
+		<string>http://www.dpdk.eu</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>http://www.dpdk.eu/browse/dpdk/snapshot/dpdk-2.2.0.tar.gz</string>
+			<key>detail</key>
+			<string>Data Plane Development Kit</string>
+			<key>file_name</key>
+			<string>dpdk-2.2.0</string>
+			<key>name</key>
+			<string>DPDK 2.2.0 </string>
+		</dict>
+	</dict>
+	<key>DPDK 2.0</key>
+	<dict>
+		<key>detail</key>
+		<string>DPDK(Data Plane Development Kit) is a set of libraries and drivers for fast packet processing.</string>
+		<key>URL</key>
+		<string>https://downloadcenter.intel.com/zh-cn/download/22777/-DPDK-</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://downloadmirror.intel.com/22777/eng/dpdk-2.0.0.tar.gz</string>
+			<key>detail</key>
+			<string>Data Plane Development Kit</string>
+			<key>file_name</key>
+			<string>dpdk-2.0.0</string>
+			<key>name</key>
+			<string>DPDK 2.0.0 </string>
+		</dict>
+	</dict>
+	<key>GRUB 2</key>
+	<dict>
+		<key>detail</key>
+		<string>GRUB 2 has replaced what was formerly known as GRUB</string>
+		<key>URL</key>
+		<string>http://www.gnu.org/software/grub/index.html</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>ftp://ftp.gnu.org/gnu/grub//grub-2.00.tar.gz</string>
+			<key>detail</key>
+			<string>grub 2.0</string>
+			<key>file_name</key>
+			<string>grub-2.00</string>
+			<key>name</key>
+			<string>grub-2.00</string>
+		</dict>
+	</dict>
+	<key>ifconfig</key>
+	<dict>
+		<key>detail</key>
+		<string>ifconfig is a system administration utility in Unix-like operating systems for network interface configuration.</string>
+		<key>URL</key>
+		<string>https://en.wikipedia.org/wiki/Ifconfig</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>http://downloads.sourceforge.net/project/net-tools/net-tools-1.60.tar.bz2?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fnet-tools%2Ffiles%2F%3Fsource%3Dnavbar&amp;ts=1454593381&amp;use_mirror=nchc</string>
+			<key>detail</key>
+			<string>net-tool source (include ifconfig) on sourceforge</string>
+			<key>file_name</key>
+			<string>net-tool</string>
+			<key>name</key>
+			<string>net-tool</string>
+		</dict>
+	</dict>
+	<key>linux 1.0</key>
+	<dict>
+		<key>detail</key>
+		<string>linux kernel 1.0</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz</string>
+			<key>detail</key>
+			<string>linux 1.0</string>
+			<key>file_name</key>
+			<string>linux</string>
+			<key>name</key>
+			<string>linux-1.0</string>
+		</dict>
+	</dict>
+	<key>linux 2.6.32.67</key>
+	<dict>
+		<key>detail</key>
+		<string>linux kernel 2.6.32.67</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz</string>
+			<key>detail</key>
+			<string>RHEL6 always use 2.6.32. this is the latest longterm source in 2.6.</string>
+			<key>file_name</key>
+			<string>linux-2.6.32.67</string>
+			<key>name</key>
+			<string>2.6.32</string>
+			<key>show_name</key>
+			<string>linux-2.6.32.67</string>
+			<key>source</key>
+			<string>kernel.org</string>
+			<key>color</key>
+			<string>red</string>
+			<key>OwnerUUID</key>
+			<string>TheOnly</string>
+		</dict>
+	</dict>
+	<key>FAKE linux 2.6.32.67</key>
+	<dict>
+		<key>detail</key>
+		<string>Please Import 2.6.32.67 in Tree Tab Instead</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>http://can.not.download.com/[deleteItIfIamReady]/linux-2.6.32.67.bundle.tar.gz</string>
+			<key>detail</key>
+			<string>Please Import [linux 2.6.32.67] in Tree Tab Instead</string>
+			<key>file_name</key>
+			<string>linux-2.6.32.67</string>
+			<key>name</key>
+			<string>2.6.32</string>
+			<key>show_name</key>
+			<string>linux-2.6.32.67</string>
+			<key>source</key>
+			<string>kernel.org</string>
+			<key>color</key>
+			<string>red</string>
+		</dict>
+	</dict>
+	<key>linux 4.4</key>
+	<dict>
+		<key>detail</key>
+		<string>Stable 4.4 Kernel Source</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.gz</string>
+			<key>detail</key>
+			<string>linux kernel 4.4</string>
+			<key>file_name</key>
+			<string>linux-4.4</string>
+			<key>name</key>
+			<string>linux-4.4</string>
+		</dict>
+	</dict>
+	<key>linux 4.6.5</key>
+	<dict>
+		<key>detail</key>
+		<string>latest stable kernel source</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.6.5.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.6.5.tar.gz</string>
+			<key>detail</key>
+			<string>linux kernel 4.6.5</string>
+			<key>file_name</key>
+			<string>linux-4.6.5</string>
+			<key>name</key>
+			<string>linux-4.6.5</string>
+		</dict>
+	</dict>
+	<key>linux 4.5</key>
+	<dict>
+		<key>detail</key>
+		<string>4.5 stable kernel source</string>
+		<key>URL</key>
+		<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.5.tar.gz</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.5.tar.gz</string>
+			<key>detail</key>
+			<string>linux kernel 4.5</string>
+			<key>file_name</key>
+			<string>linux-4.5</string>
+			<key>name</key>
+			<string>linux-4.5</string>
+		</dict>
+	</dict>
+	<key>netstat</key>
+	<dict>
+		<key>detail</key>
+		<string>network statistics</string>
+		<key>URL</key>
+		<string>http://netstat.net</string>
+	</dict>
+	<key>nc</key>
+	<dict>
+		<key>detail</key>
+		<string>Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol.</string>
+		<key>URL</key>
+		<string>http://netcat.sourceforge.net</string>
+	</dict>
+	<key>telnet</key>
+	<dict>
+		<key>detail</key>
+		<string>The GNU Networking Utilities are the common networking utilities, clients and servers of the GNU Operating System.</string>
+		<key>URL</key>
+		<string>http://directory.fsf.org/wiki/Inetutils</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://ftp.gnu.org/gnu/inetutils/inetutils-1.9.4.tar.gz</string>
+			<key>detail</key>
+			<string>telnet</string>
+			<key>file_name</key>
+			<string>inetutils-1.9.4</string>
+			<key>name</key>
+			<string>inetutils-1.9.4</string>
+		</dict>
+	</dict>
+	<key>SocketExample</key>
+	<dict>
+		<key>detail</key>
+		<string>Socket Example</string>
+		<key>URL</key>
+		<string>https://github.com/gzg1984/SocketExample</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/gzg1984/SocketExample/archive/master.zip</string>
+			<key>detail</key>
+			<string>Socket Example</string>
+			<key>file_name</key>
+			<string>SocketExample-master</string>
+			<key>name</key>
+			<string>SocketExample</string>
+		</dict>
+	</dict>
+	<key>xinetd</key>
+	<dict>
+		<key>detail</key>
+		<string>xinetd is a secure replacement for inetd</string>
+		<key>URL</key>
+		<string>https://github.com/xinetd-org/xinetd</string>
+		<key>bundle</key>
+		<dict>
+			<key>URL</key>
+			<string>https://github.com/xinetd-org/xinetd/archive/master.zip</string>
+			<key>detail</key>
+			<string>telnet</string>
+			<key>file_name</key>
+			<string>xinetd-master</string>
+			<key>name</key>
+			<string>xinetd-master</string>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>b1</string>
+</dict>
+</plist>
