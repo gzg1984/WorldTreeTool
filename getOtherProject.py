@@ -6,11 +6,11 @@ except ImportError:
  import xml.etree.ElementTree as ET 
  import sys 
 try: 
- tree = ET.parse("linux.xml")     #打开xml文档 
+ tree = ET.parse("comments_template.xml")     #打开xml文档 
 #root = ET.fromstring(country_string) #从字符串传递xml 
  root = tree.getroot()         #获得root节点  
 except Exception, e: 
- print "Error:cannot parse file:country.xml."
+ print "Error:cannot parse file:comments_template.xml."
  sys.exit(1) 
 #print root.tag, "-", root.attrib  
 #
