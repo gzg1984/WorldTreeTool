@@ -1,11 +1,11 @@
 #!/usr/bin/env python 
 #coding:utf-8 
 import os
+import sys 
 try: 
  import xml.etree.cElementTree as ET 
 except ImportError: 
  import xml.etree.ElementTree as ET 
- import sys 
 
 def SubElementWithText(parent, tag, text):
     attrib = {}
