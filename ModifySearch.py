@@ -7,6 +7,11 @@ try:
 except ImportError: 
  import xml.etree.ElementTree as ET 
 
+###check the parameter file
+if len(sys.argv) < 2:
+        print "need a full path file as CurrentSearch.xml"
+        sys.exit(255)
+
 def SubElementWithText(parent, tag, text):
     attrib = {}
     element = parent.makeelement(tag, attrib)
@@ -15,7 +20,7 @@ def SubElementWithText(parent, tag, text):
     return element
 
 try: 
- tree = ET.parse("CurrentSearch.plist")     #打开xml文档 
+ tree = ET.parse(sys.argv[1])     #打开xml文档 
 #root = ET.fromstring(country_string) #从字符串传递xml 
  root = tree.getroot()         #获得root节点  
 except Exception, e: 
@@ -47,15 +52,20 @@ for country in root.findall('dict'): #找到root节点下的所有country节点
         ConnectArray.remove(ConnectUnit)
     #print ConnectUnit.tag
     #print ConnectUnit.text
-    for line in open("/tmp/gzgtmpuniq"):
+    uniqfilepath=os.path.dirname(sys.argv[1])
+    uniqfilepath=uniqfilepath + "/gzgtmpuniq"
+    #print "uniq file is :" + uniqfilepath
+    for line in open(uniqfilepath):
         str=line
         #line.replace("l","ssssss")
         str_raw=str[:-1]
-        print str_raw
+        #print str_raw
         SubElementWithText(ConnectArray, 'string', str_raw)
     #temp_f=cat "/tmp/gzgtmpuniq"
     #lines = temp_f.readlines()#读取全部内容  
     #for line in lines :
     #        print line 
 
-tree.write('output.xml') 
+outputfilepath=os.path.dirname(sys.argv[1])
+outputfilepath=outputfilepath + "/output.xml"
+tree.write(outputfilepath) 

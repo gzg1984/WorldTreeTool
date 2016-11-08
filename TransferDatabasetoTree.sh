@@ -9,19 +9,19 @@ ConnectecTagets=`mysql -u root --password=19841221 user0 <<!
 select LinkTarget from $1 where LinkType = "connect"
 !`
 
-rm /tmp/gzgtmpuniq
+tempFolder=`date +%d%M%N`
+mkdir /tmp/$tempFolder
 for Objects in $ConnectecTagets
 do
 	if [ "$Objects" = "LinkTarget" ]
 	then
 		continue;
 	fi
-	echo $Objects >> /tmp/gzgtmpuniq
+	echo $Objects >> /tmp/$tempFolder/gzgtmpuniq
 done
 
 ###### Creat a new current search file 
-
-cat  > CurrentSearch.plist  <<!
+cat  > /tmp/$tempFolder/CurrentSearch.plist  <<!
 <plist version="1.0">
 <dict>
         <key>CoreName</key>
@@ -37,4 +37,5 @@ cat  > CurrentSearch.plist  <<!
 </plist>
 !
 
-python ModifySearch.py
+python ModifySearch.py /tmp/$tempFolder/CurrentSearch.plist 
+cat /tmp/$tempFolder/output.xml
