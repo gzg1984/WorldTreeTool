@@ -1,12 +1,20 @@
 #!/usr/bin/evn python 
 #coding:utf-8 
+import sys 
+
 try: 
  import xml.etree.cElementTree as ET 
 except ImportError: 
  import xml.etree.ElementTree as ET 
- import sys 
+
+###check the parameter file
+if len(sys.argv) < 2:
+	print "need a file as input"
+	sys.exit(255)
+
+
 try: 
- tree = ET.parse("comments_template.xml")     #打开xml文档 
+ tree = ET.parse(sys.argv[1])     #打开xml文档 
 #root = ET.fromstring(country_string) #从字符串传递xml 
  root = tree.getroot()         #获得root节点  
 except Exception, e: 
