@@ -39,3 +39,4 @@ cat  > /tmp/$tempFolder/CurrentSearch.plist  <<!
 
 python ModifySearch.py /tmp/$tempFolder/CurrentSearch.plist 
 cat /tmp/$tempFolder/output.xml
+rm -rf /tmp/$tempFolder
