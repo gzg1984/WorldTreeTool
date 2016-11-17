@@ -29,6 +29,16 @@ CREATE TABLE `Computer_science` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Computer_science`
+--
+
+LOCK TABLES `Computer_science` WRITE;
+/*!40000 ALTER TABLE `Computer_science` DISABLE KEYS */;
+INSERT INTO `Computer_science` VALUES ('connect','Operating_system');
+/*!40000 ALTER TABLE `Computer_science` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `DataStructAndAlgorithm`
 --
 
@@ -40,6 +50,16 @@ CREATE TABLE `DataStructAndAlgorithm` (
   `LinkTarget` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `DataStructAndAlgorithm`
+--
+
+LOCK TABLES `DataStructAndAlgorithm` WRITE;
+/*!40000 ALTER TABLE `DataStructAndAlgorithm` DISABLE KEYS */;
+INSERT INTO `DataStructAndAlgorithm` VALUES ('connect','DataStructAndAlgorithm'),('belong','Data_structure');
+/*!40000 ALTER TABLE `DataStructAndAlgorithm` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `Data_structure`
@@ -55,6 +75,16 @@ CREATE TABLE `Data_structure` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Data_structure`
+--
+
+LOCK TABLES `Data_structure` WRITE;
+/*!40000 ALTER TABLE `Data_structure` DISABLE KEYS */;
+INSERT INTO `Data_structure` VALUES ('belong','Computer_science');
+/*!40000 ALTER TABLE `Data_structure` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `Linux_kernel`
 --
 
@@ -66,6 +96,16 @@ CREATE TABLE `Linux_kernel` (
   `LinkTarget` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `Linux_kernel`
+--
+
+LOCK TABLES `Linux_kernel` WRITE;
+/*!40000 ALTER TABLE `Linux_kernel` DISABLE KEYS */;
+INSERT INTO `Linux_kernel` VALUES ('connect','linux');
+/*!40000 ALTER TABLE `Linux_kernel` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `Operating_system`
@@ -81,6 +121,16 @@ CREATE TABLE `Operating_system` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Operating_system`
+--
+
+LOCK TABLES `Operating_system` WRITE;
+/*!40000 ALTER TABLE `Operating_system` DISABLE KEYS */;
+INSERT INTO `Operating_system` VALUES ('connect','Linux_kernel');
+/*!40000 ALTER TABLE `Operating_system` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `linux`
 --
 
@@ -92,6 +142,16 @@ CREATE TABLE `linux` (
   `LinkTarget` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `linux`
+--
+
+LOCK TABLES `linux` WRITE;
+/*!40000 ALTER TABLE `linux` DISABLE KEYS */;
+INSERT INTO `linux` VALUES ('connect','linux'),('connect','DataStructAndAlgorithm'),('connect','linux-2.6.32.67.bundle');
+/*!40000 ALTER TABLE `linux` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `objects`
@@ -107,6 +167,16 @@ CREATE TABLE `objects` (
   `detail` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `objects`
+--
+
+LOCK TABLES `objects` WRITE;
+/*!40000 ALTER TABLE `objects` DISABLE KEYS */;
+INSERT INTO `objects` VALUES ('linux','https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz','linux_1_0','linux kernel 1.0');
+/*!40000 ALTER TABLE `objects` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -117,4 +187,4 @@ CREATE TABLE `objects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-17 20:10:32
+-- Dump completed on 2016-11-17 20:51:17
