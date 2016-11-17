@@ -22,9 +22,9 @@
 
 # set here the full path of the info2html.conf
 $VERSION = "2.0";
-$INFO2HTMLCONF = "./info2html.conf";
+#$INFO2HTMLCONF = "./info2html.conf";
 require 5;
-require($INFO2HTMLCONF);  #-- configuration settings
+#require($INFO2HTMLCONF);  #-- configuration settings
 use CGI;
 $ENV{'REQUEST_METHOD'} or
  print "Note: I'm really supposed to be run as a CGI!\n";
