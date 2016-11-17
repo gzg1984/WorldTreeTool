@@ -32,11 +32,11 @@ AliasNameToURL=`mysql -u root --password=19841221 user0 <<!
 select URL from objects where ObjectName = '$1'
 !`
 
-BUNDLE_XML=default
+BUNDLE_XML=
 if [ -z "$AliasNameToURL" ]
 then
 	##Need do nothing
-BUNDLE_XML=default1
+BUNDLE_XML=
 else
 ###############################
 THE_URL=`echo $AliasNameToURL|sed -e "s/URL //g"`
@@ -50,7 +50,7 @@ THE_detail=`echo $AliasNameToDetail|sed -e "s/detail //g"`
 ###############################
 if [ -z "$BundleAllInfo" ]
 then
-BUNDLE_XML=default2
+BUNDLE_XML=
 else
 #ProjectNodeName	URL	detail	file_name	show_name
 #linux 1.0	https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz	linux 1.0	linux	linux-1.0
