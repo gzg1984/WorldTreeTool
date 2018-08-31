@@ -29,6 +29,16 @@ CREATE TABLE `Algorithm` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `Algorithm`
+--
+
+LOCK TABLES `Algorithm` WRITE;
+/*!40000 ALTER TABLE `Algorithm` DISABLE KEYS */;
+INSERT INTO `Algorithm` VALUES ('Project','Source Code for Data Structures and Algorithm Analysis in C (Second Edition)');
+/*!40000 ALTER TABLE `Algorithm` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `DSAAC2eCode`
 --
 
@@ -40,6 +50,15 @@ CREATE TABLE `DSAAC2eCode` (
   `LinkTarget` varchar(512) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `DSAAC2eCode`
+--
+
+LOCK TABLES `DSAAC2eCode` WRITE;
+/*!40000 ALTER TABLE `DSAAC2eCode` DISABLE KEYS */;
+/*!40000 ALTER TABLE `DSAAC2eCode` ENABLE KEYS */;
+UNLOCK TABLES;
 
 --
 -- Table structure for table `bundles`
@@ -58,6 +77,16 @@ CREATE TABLE `bundles` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
+-- Dumping data for table `bundles`
+--
+
+LOCK TABLES `bundles` WRITE;
+/*!40000 ALTER TABLE `bundles` DISABLE KEYS */;
+INSERT INTO `bundles` VALUES ('ethtool','https://www.kernel.org/pub/software/network/ethtool/ethtool-4.2.tar.gz','ethtool 4.2, 2015-10-09','ethtool-4.2','ethtool 4.2'),('Basic','https://github.com/gzg1984/APUE/archive/master.zip','Basic System Call Example','APUE-master','Basic Example'),('pthreads-sample','https://github.com/gzg1984/pthreads/archive/master.zip','pthread example from Linux Source Project','pthread-master','pthread Example'),('GLIBC','http://ftp.gnu.org/gnu/glibc/glibc-2.23.tar.gz','2016-02-19: glibc 2.23 released.','glibc-2.23','glibc'),('DPDK 2.2','http://www.dpdk.eu/browse/dpdk/snapshot/dpdk-2.2.0.tar.gz','Data Plane Development Kit','dpdk-2.2.0','DPDK 2.2.0 '),('DPDK 2.0','https://downloadmirror.intel.com/22777/eng/dpdk-2.0.0.tar.gz','Data Plane Development Kit','dpdk-2.0.0','DPDK 2.0.0 '),('GRUB 2','ftp://ftp.gnu.org/gnu/grub//grub-2.00.tar.gz','grub 2.0','grub-2.00','grub-2.00'),('ifconfig','http://downloads.sourceforge.net/project/net-tools/net-tools-1.60.tar.bz2?r=http%3A%2F%2Fsourceforge.net%2Fprojects%2Fnet-tools%2Ffiles%2F%3Fsource%3Dnavbar&ts=1454593381&use_mirror=nchc','net-tool source (include ifconfig) on sourceforge','net-tool','net-tool'),('linux 1.0','https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz','linux 1.0','linux','linux-1.0'),('linux 2.6.32.67','https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz','RHEL6 always use 2.6.32. this is the latest longterm source in 2.6.','linux-2.6.32.67','2.6.32'),('FAKE linux 2.6.32.67','http://can.not.download.com/[deleteItIfIamReady]/linux-2.6.32.67.bundle.tar.gz','Please Import [linux 2.6.32.67] in Tree Tab Instead','linux-2.6.32.67','2.6.32'),('linux 4.4','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.gz','linux kernel 4.4','linux-4.4','linux-4.4'),('linux 4.6.5','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.6.5.tar.gz','linux kernel 4.6.5','linux-4.6.5','linux-4.6.5'),('linux 4.5','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.5.tar.gz','linux kernel 4.5','linux-4.5','linux-4.5'),('telnet','https://ftp.gnu.org/gnu/inetutils/inetutils-1.9.4.tar.gz','telnet','inetutils-1.9.4','inetutils-1.9.4'),('SocketExample','https://github.com/gzg1984/SocketExample/archive/master.zip','Socket Example','SocketExample-master','SocketExample'),('xinetd','https://github.com/xinetd-org/xinetd/archive/master.zip','telnet','xinetd-master','xinetd-master');
+/*!40000 ALTER TABLE `bundles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `objects`
 --
 
@@ -72,6 +101,16 @@ CREATE TABLE `objects` (
   PRIMARY KEY (`TableName`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `objects`
+--
+
+LOCK TABLES `objects` WRITE;
+/*!40000 ALTER TABLE `objects` DISABLE KEYS */;
+INSERT INTO `objects` VALUES ('Algorithm','https://en.wikipedia.org/wiki/Algorithm','Algorithm','Algorithm detail missing'),('APUE','http://www.apuebook.com','APUE','Advanced Programming in the UNIXÂ® Environment'),('Basic','https://www.ibm.com/developerworks/community/groups/service/html/communitystart?communityUuid=a17236fd-e883-409b-9037-9b81704cc3a7','Basic','How to connetct User tools and Kernel.  Have a free comments package for downloading.'),('DPDK 2.0','https://downloadcenter.intel.com/zh-cn/download/22777/-DPDK-','DPDK 2.0','DPDK(Data Plane Development Kit) is a set of libraries and drivers for fast packet processing.'),('DPDK 2.2','http://www.dpdk.eu','DPDK 2.2','DPDK(Data Plane Development Kit) is a set of libraries and drivers for fast packet processing.'),('DSAAC2eCode','http://users.cis.fiu.edu/~weiss/dsaa_c2e/DSAAC2eCode.tar.Z','DSAAC2eCode','Data Structures and Algorithm Analysis in C (Second Edition)'),('ethtool','https://en.wikipedia.org/wiki/Ethtool','ethtool','ethtool is a utility for Linux kernel-based operating system for displaying and modifying some parameters of network interface controllers (NICs) and their device drivers. '),('FAKE linux 2.6.32.67','https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz','FAKE linux 2.6.32.67','Please Import 2.6.32.67 in Tree Tab Instead'),('FHS','http://refspecs.linuxfoundation.org/fhs.shtml','FHS','Filesystem Hierarchy Standard'),('GFDL','','GFDL','GNU Free Documentation License'),('GLIBC','https://www.gnu.org/software/libc/index.html','GLIBC','The GNU C Library (glibc)'),('GNU','http://www.gnu.org','GNU','GNU is Not Unix'),('GNU Software','http://www.gnu.org/software/software.html','GNU Software','GNU is an operation system which is 100% free software.'),('GNU/Linux','http://www.gnu.org/gnu/linux-and-gnu.html','GNU/Linux','GNU/Linux operating system'),('GPL','','GPL','GNU General Public License'),('grub','https://en.wikipedia.org/wiki/GNU_GRUB','grub','GNU GRUB (short for GNU GRand Unified Bootloader) is a boot loader package from the GNU Project.'),('GRUB 2','http://www.gnu.org/software/grub/index.html','GRUB 2','GRUB 2 has replaced what was formerly known as GRUB'),('ifconfig','https://en.wikipedia.org/wiki/Ifconfig','ifconfig','ifconfig is a system administration utility in Unix-like operating systems for network interface configuration.'),('kernel','https://en.wikipedia.org/wiki/Linux_kernel','kernel','The Linux kernel is a Unix-like computer operating system kernel.'),('LGPL','','LGPL','GNU Library General Public License '),('Linux','https://en.wikipedia.org/wiki/Linux','Linux','Linux is a Unix-like and mostly POSIX-compliant computer operating system (OS) assembled under the model of free and open-source software development and distribution. '),('linux 1.0','https://www.kernel.org/pub/linux/kernel/v1.0/linux-1.0.tar.gz','linux 1.0','linux kernel 1.0'),('linux 2.6.32.67','https://www.kernel.org/pub/linux/kernel/v2.6/longterm/v2.6.32/linux-2.6.32.67.tar.gz','linux 2.6.32.67','linux kernel 2.6.32.67'),('linux 4.4','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.4.tar.gz','linux 4.4','Stable 4.4 Kernel Source'),('linux 4.5','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.5.tar.gz','linux 4.5','4.5 stable kernel source'),('linux 4.6.5','https://www.kernel.org/pub/linux/kernel/v4.x/linux-4.6.5.tar.gz','linux 4.6.5','latest stable kernel source'),('LKML','https://lkml.org','LKML','Linux Kernel Mailing List'),('LSB','http://www.linuxfoundation.org/collaborate/workgroups/lsb','LSB','Linux Standard Base'),('LSB SDK','http://www.linuxfoundation.org/collaborate/workgroups/lsb/download','LSB SDK','LSB Software Development Kit (SDK)'),('nc','http://netcat.sourceforge.net','nc','Netcat is a featured networking utility which reads and writes data across network connections, using the TCP/IP protocol.'),('netstat','http://netstat.net','netstat','network statistics'),('POSIX','http://www.opengroup.org/search/node/posix','POSIX','Portable Operating System Interface for UNIX'),('pthreads-sample','','pthreads-sample','This is pthread sample for pthread functions'),('SocketExample','https://github.com/gzg1984/SocketExample','SocketExample','Socket Example'),('telnet','http://directory.fsf.org/wiki/Inetutils','telnet','The GNU Networking Utilities are the common networking utilities, clients and servers of the GNU Operating System.'),('UNIX','http://www.opengroup.org/standards/unix','UNIX','UNIXÂ®'),('xinetd','https://github.com/xinetd-org/xinetd','xinetd','xinetd is a secure replacement for inetd');
+/*!40000 ALTER TABLE `objects` ENABLE KEYS */;
+UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
@@ -82,4 +121,4 @@ CREATE TABLE `objects` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-11-17 20:10:17
+-- Dump completed on 2016-11-17 20:59:29

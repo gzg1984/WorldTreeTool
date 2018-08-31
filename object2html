@@ -37,8 +37,6 @@ $VERSION = "2.0";
 
 # Getting the full path of the info2html.conf
 $0 =~ m!(.*/)[^/]+$!;
-$INFO2HTMLCONF = "$1info2html.conf";
-require($INFO2HTMLCONF);  #-- configuration settings
 
 use CGI;
 $ENV{'REQUEST_METHOD'} or
@@ -328,85 +326,6 @@ sub ReadTagTable{
   close(FH);
 }
 
-#----------------------------------------------------------
-#                   ParsCrossRefs
-#----------------------------------------------------------
-#  scans a line for the existence of cross references and
-#  transforms them to HTML using a little icon
-#----------------------------------------------------------
-sub ParsCrossRefs{
-  local($prev,$Line,$BaseInfoFile) = @_;
-  local($*,$NewLine,$Token) = (1);
-  $Line = " ".$Line;
-  if ($prev =~ /\*Note([^\t\,\.]*)$/i) {
-      if ($Line =~ /^$TAG$TE/) {
-	  $Line = "$prev-NEWLINE-$Line";
-      }
-  }
-  @Tokens = split(/(\*Note)\s*/i,$Line);  # -- split the line
-  while($Token = shift @Tokens){
-    $CrossRefTag = $CrossRefRef = $CrossRefFile = $CrossRefText = '';
-    if($Token !~ /^\*Note/i){   #-- this part is pure text
-      $NewLine .= $Token;
-      next;                     #-- ... take the next part
-    }
-    $CrossRef = shift(@Tokens); 
-    if ($CrossRef !~ /:/){      #-- seems not to be a valid cross ref.
-      $NewLine .= $Token.$CrossRef;
-      next;                     # -- ... take the next one
-    }
-    if ($CrossRef =~ /^([^:]+)::/){  # -- a simple cross ref..
-      $CrossRefTag = $1;
-      $CrossRefText = $';
-      $CrossRefRef = $CrossRefTag;
-      $CrossRefTag =~ s/-NEWLINE-/ /g;
-      $CrossRefTag =~ s/^\s+//;
-      $CrossRefTag =~ s/\s+/ /g;
-      $CrossRefRef =~ s/-NEWLINE-/\n/g;
-      $CrossRefTag = &Escape($CrossRefTag);   # -- escape specials
-      $BaseInfoFile = &Escape($BaseInfoFile);
-      $NewLine .= "<a class='xref' title='a cross reference' href=\"$PROGRAM?($BaseInfoFile)$CrossRefTag\"\n>$CR_URL$CrossRefRef</a>$CrossRefText";
-      next;                     # -- .. take the next one
-  }
-    if ($CrossRef !~ /$TE/) {	# never mind if tag doesn't end on this line
-	$NewLine .= $Token.$CrossRef;
-	next;
-    }
-#print "--- Com. CR : $CrossRef --- \n";
-    $CrossRef =~ /([^:]+):/;    #-- A more complicated one ..
-    $CrossRefRef = $1;
-    $CrossRef  = $';
-    $CrossRefText = $CrossRef;
-    if ($CrossRef =~ /^(\s|\n|-NEWLINE-)*\(($FTAG)\)/){  #-- .. with another file ?
-     $CrossRefFile = $2;
-     $CrossRef = $';
-    }
-   $CrossRef  =~ /^(\s|\n|-NEWLINE-)*($TAG)?($TE)/;       #-- ... and a tag ?
-   $CrossRefTag = $2;
-   if ($CrossRefTag eq "" && $CrossRefFile eq ""){
-     $NewLine .= "*Note : $CrossRefText$3";
-     next;
-   }
-    
-    $CrossRefTag =~ s/-NEWLINE-/ /g;
-    $CrossRefTag =~ s/^\s+//;
-    $CrossRefTag =~ s/\s+/ /g;
-    $CrossRefRef =~ s/-NEWLINE-/\n/g;
-    $CrossRefText =~ s/-NEWLINE-/\n/g;
-    $CrossRefFile = $BaseInfoFile if $CrossRefFile eq "";
-    $CrossRefTag  = "Top" if $CrossRefTag eq "";
-    $CrossRefRef = "($CrossRefFile)$CrossRefTag" if $CrossRefRef eq '';
-    $CrossRefTag = &Escape($CrossRefTag);      #-- escape specials
-    $CrossRefFile = &Escape($CrossRefFile);
-    #-- append the HTML text
-    $NewLine .= "<a class='xref' title='a cross reference' href=\"$PROGRAM?($CrossRefFile)$CrossRefTag\"\n>$CR_URL$CrossRefRef</a>$CrossRefText";
-  }
-  if ($NewLine =~ /\*Note([^\t\,\.]*)$/i) {
-      return "DONTPRINTYET $NewLine";
-  } else {
-      $NewLine;  #-- return the new line
-  }
-}
 
 
 #-------------------------------------------------------------

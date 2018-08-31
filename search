@@ -135,7 +135,6 @@ my( %Desc2BaseExt, %BaseFreq, %BaseExt2Base );
 %tables = `mysql -u root --password=19841221 user0 < /srv/www/cgi-bin/showtables.sql `  ;
 print "<h2>GNU info on the following topics is available here:</h2>\n";
 print "<ul>\n";
-	print %tables ;
 
 # Now output the list, cleverly sorting and linking...
 #foreach my $desc (sort { lc($a) cmp lc($b) } keys %Desc2BaseExt) {

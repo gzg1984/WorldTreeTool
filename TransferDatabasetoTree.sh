@@ -103,7 +103,7 @@ fi
 ###### Creat a new current search file 
 if [ -z "$ConnectecTagets" ]
 then
-if [ -z $BelongTarget ]
+if [ -z "$BelongTarget" ]
 then
 cat  > /tmp/$tempFolder/CurrentSearch.plist  <<!
 <plist version="1.0">
